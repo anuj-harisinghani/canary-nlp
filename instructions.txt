@@ -1,0 +1,25 @@
+# For first time setup:
+# Using the terminal or cmd/Anaconda navigator, execute the following commands
+
+# create env:
+conda create --name canary python=3.8.5
+
+# activate env:
+conda activate canary
+
+# install dependencies from requirements.txt (first cd into this folder)
+pip install -r requirements.txt
+
+# if you want to install dependencies from scratch:
+pip install --upgrade pandas
+pip install --upgrade numpy
+pip install matplotlib==3.3.2
+pip install seaborn==0.11.1
+pip install --upgrade PyYAML
+pip install PyCap
+pip install nltk
+pip install sklearn
+
+# to write all installed packages in the environment into a file:
+pip freeze > ~/multimodal-ml-framework/requirements_new.txt
+
