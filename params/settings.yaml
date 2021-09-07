@@ -1,0 +1,44 @@
+## Settings.YAML file
+## this file is used to define the main parameters the framework will use.
+## before each experiment, make sure to edit these parameters with what's needed.
+## for each parameter, a set of possible options are given in the comments.
+## to add support for more classifiers, you can edit ./classes/handlers/ModelsHandler and choose the respective classifier here.
+
+
+# number of seeds for which to run the framework
+seeds: 10
+
+# number of folds to split the data into
+folds: 10
+
+# RandomSeed (not currently being used)
+random_seed: 0
+
+# possible modes: "single_tasks", "fusion", "ensemble"
+mode: "ensemble"
+
+# classifiers to use (either one or many in a list): "RandomForest", "GausNaiveBayes", "LogReg", "Dummy"
+classifiers: ["RandomForest", "GausNaiveBayes", "LogReg"]
+
+# tasks to run for (either one or many in a list): "cookie_theft", "pupil_calib", "memory", "reading"
+tasks:  ["PupilCalib", "CookieTheft", "Reading", "Memory"]
+
+# output folder: specify which folder you'd like the results to go to (will be sent under ../results/)
+output_folder: "ensemble_test_all"
+
+# any conditions on PID list extraction
+# options can be "default" (leave this as default)
+PID_extraction_method: "default"
+
+# eye tracking calibration flag for participant_log.csv
+# 1: Keep all data
+# 2: Only reject participants for whom calibration failed
+# 3: Reject all participants for whom calibration was not perfect
+# leave this as is
+eye_tracking_calibration_flag : 2
+
+# correlation coefficients for feature selection
+# any features with higher pairwise correlation than this will be removed
+fs_pairwise_correlation: .85
+# any features having correlation with the outcome lower than this will be removed
+fs_outcome_correlation: .2
