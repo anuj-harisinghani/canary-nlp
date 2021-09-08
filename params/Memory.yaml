@@ -1,10 +1,5 @@
-#modalities: {
-#  "eye": False,
-#  "speech": True,
-#  "moca": False,
-#  "multimodal": False
-#}
 modalities: ["speech"]
+
 # all features here
 features: {
   "speech": {

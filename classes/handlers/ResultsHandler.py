@@ -64,7 +64,7 @@ class ResultsHandler:
                                 SPECIFICITY: specificity
                             }, ignore_index=True)
         
-        average_seeds(results_csv, foldername)
+        ResultsHandler.average_seeds(results_csv, foldername)
 
     @staticmethod
     def average_seeds(results: pd.DataFrame, foldername: str):
