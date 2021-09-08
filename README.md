@@ -34,16 +34,5 @@ After setting up the parameters, it's time to run the framework. Either use a Py
 Note: The canary environment has to be activated everytime a new terminal is opened.
 
 The results would be saved at **results/output_folder** where the output_folder is the one specified in **params/settings.yaml**.
-
-## Generating results over all the seeds
-The file **compile_results.py** is used to compile the results across all seeds and creates a cleaner looking table.
-To compile the results across all seeds, open the terminal and execute:
-
-`python compile_results.py <path to output folder> <path to file and name of file>`
-
-_For example:_ for compiling results under a folder **TF**, this above line would be:
-
-`python compile_results.py ./results/TF ./results/TF/tf`, 
-where **./results/TF/tf** is the path where the compiled results should be saved, and **tf** is the name of the file. 
-The resulting file is a .csv file. No need to specify .csv in the filename for the above line.
+A CSV file under the output_folder will appear (having the same name as the output_folder) that will contain results aggregated over all seeds.
 
