@@ -2,6 +2,17 @@
 ## this file is used to map the names of csv files in ./dataset/csv_tables/ to shorter keywords.
 ## no need to change anything here.
 
+# maps each modality with their respective datasets
+modality_wise_datasets: {
+"eye" : ["eye_fixation.csv", "participant_log.csv"],
+"speech" : ["text.csv", "acoustic.csv"],
+"moca" : ["moca.csv"],
+"multimodal" : ["mm_overall.csv"]
+}
+
+### --------------------------------------------------------------------------------------------------
+### DICTIONARIES BELOW ARE DEPRECATED, WILL BE REMOVED SOON IF NO USE IS FOUND
+### --------------------------------------------------------------------------------------------------
 
 # maps filenames to shorter, easier to remember names
 filenames: {
@@ -49,14 +60,6 @@ filenames_csv: {
 "participant_log" : "canary_participant_log.csv",
 "redcap" : "canary_redcap_repository.csv",
 "text" : "canary_text_features.csv"
-}
-
-# maps each modality with their respective datasets
-modality_wise_datasets: {
-"eye" : ["eye_fixation.csv", "participant_log.csv"],
-"speech" : ["text.csv", "acoustic.csv"],
-"moca" : ["moca.csv"],
-"multimodal" : ["mm_overall.csv"]
 }
 
 # maps each modality with respective dataset files

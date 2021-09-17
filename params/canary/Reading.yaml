@@ -1,5 +1,5 @@
 # modalities : ["eye", "speech"]
-modalities: ["speech"]
+modalities: ["eye", "speech"]
 
 # all features here
 features: {

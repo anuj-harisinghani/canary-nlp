@@ -17,8 +17,9 @@ def main():
     classifiers = params["classifiers"]
     output_folder = params["output_folder"]
     extraction_method = params["PID_extraction_method"]
+    dataset_name = params['dataset']
 
-    path = os.path.join(os.getcwd(), 'results', output_folder)
+    path = os.path.join(os.getcwd(), 'results', dataset_name, output_folder)
     if not os.path.exists(path):
         os.mkdir(path)
 
@@ -33,7 +34,7 @@ def main():
 
     # compile results over all seeds into a single output table
     # the name of the file will be the same as the results foldername specified in settings.yaml
-    ResultsHandler.compile_results(output_folder)
+    ResultsHandler.compile_results(dataset_name, output_folder)
 
 
 if __name__ == '__main__':

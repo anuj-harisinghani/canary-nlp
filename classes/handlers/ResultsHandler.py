@@ -27,8 +27,8 @@ class ResultsHandler:
         pass
 
     @staticmethod
-    def compile_results(foldername: str):
-        input_files = os.path.join(os.getcwd(), 'results', foldername)
+    def compile_results(dataset_name: str, foldername: str):
+        input_files = os.path.join(os.getcwd(), 'results', dataset_name, foldername)
         results_csv = pd.DataFrame(columns=RESULT_COLUMNS)
         for directory in os.listdir(input_files):
             if os.path.isdir(os.path.join(input_files, directory)):
@@ -64,10 +64,10 @@ class ResultsHandler:
                                 SPECIFICITY: specificity
                             }, ignore_index=True)
         
-        ResultsHandler.average_seeds(results_csv, foldername)
+        ResultsHandler.average_seeds(results_csv, dataset_name, foldername)
 
     @staticmethod
-    def average_seeds(results: pd.DataFrame, foldername: str):
+    def average_seeds(results: pd.DataFrame, dataset_name: str, foldername: str):
         results_csv = pd.DataFrame(columns=RESULT_COLUMNS)
         settings = results.settings.unique()
         for setting in settings:
@@ -109,6 +109,6 @@ class ResultsHandler:
                     SPEC_SD : spec_sd
                 }, ignore_index=True)
         
-        outfile = os.path.join(os.getcwd(), 'results', foldername, foldername+'.csv')
+        outfile = os.path.join(os.getcwd(), 'results', dataset_name, foldername, foldername+'.csv')
         results_csv.to_csv(outfile, index=False)
 
