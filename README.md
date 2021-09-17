@@ -1,6 +1,7 @@
 # CANARY-NLP
  
 Machine Learning framework for the CANARY project. This framework utilizes eye-tracking data and speech data to predict if a participant is a patient or a healthy control. This is an NLP focused fork of the main framework.
+[Click here for documentation.](https://docs.google.com/document/d/1GpOHRY3YqOn_rWwBOj5ddYST5MnzThyxnKsRWb9qZiA/edit?usp=sharing)
 
 ## Setup
 1. (Recommended) Install Anaconda 3 on your system: https://www.anaconda.com/products/individual
